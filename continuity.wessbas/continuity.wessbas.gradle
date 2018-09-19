@@ -12,9 +12,11 @@ dependencies {
 	compile project(':continuity.api')
 	compile project(':continuity.commons')
 	
+	compile files('lib/behaviormodelextractor_forecast.jar')
+	
 	compile group: 'net.sf.markov4jmeter', name: 'm4jdsl', version: '1.0.0'
 	compile group: 'net.sf.markov4jmeter', name: 'commons', version: '1.0.0'
-	compile group: 'net.sf.markov4jmeter', name: 'behaviormodelextractor', version: '1.0.0'
+	//compile group: 'net.sf.markov4jmeter', name: 'behaviormodelextractor', version: '1.0.0'
 	compile group: 'net.sf.markov4jmeter', name: 'modelgenerator', version: '1.0.0'
 	compile group: 'net.sf.markov4jmeter', name: 'testplangenerator', version: '1.0.0'
 	compile group: 'net.voorn', name: 'markov4jmeter', version: '1.0.20140405'

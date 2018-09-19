@@ -1,0 +1,991 @@
+18/08/07 10:20:28 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/08/07 10:20:30 INFO SparkContext: Running Spark version 2.3.0
+18/08/07 10:20:30 INFO SparkContext: Submitted application: sparklyr
+18/08/07 10:20:30 INFO SecurityManager: Changing view acls to: ahi
+18/08/07 10:20:30 INFO SecurityManager: Changing modify acls to: ahi
+18/08/07 10:20:30 INFO SecurityManager: Changing view acls groups to: 
+18/08/07 10:20:30 INFO SecurityManager: Changing modify acls groups to: 
+18/08/07 10:20:30 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ahi); groups with view permissions: Set(); users  with modify permissions: Set(ahi); groups with modify permissions: Set()
+18/08/07 10:20:30 INFO Utils: Successfully started service 'sparkDriver' on port 63305.
+18/08/07 10:20:30 INFO SparkEnv: Registering MapOutputTracker
+18/08/07 10:20:30 INFO SparkEnv: Registering BlockManagerMaster
+18/08/07 10:20:30 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+18/08/07 10:20:30 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+18/08/07 10:20:30 INFO DiskBlockManager: Created local directory at C:\Users\ahi\AppData\Local\Temp\blockmgr-c7c73745-9a82-4298-bf58-4d0daa6db982
+18/08/07 10:20:30 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+18/08/07 10:20:30 INFO SparkEnv: Registering OutputCommitCoordinator
+18/08/07 10:20:30 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+18/08/07 10:20:30 INFO SparkUI: Bound SparkUI to 127.0.0.1, and started at http://127.0.0.1:4040
+18/08/07 10:20:30 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar at spark://127.0.0.1:63305/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar with timestamp 1533630030769
+18/08/07 10:20:30 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/org.joda_joda-convert-1.2.jar at spark://127.0.0.1:63305/jars/org.joda_joda-convert-1.2.jar with timestamp 1533630030770
+18/08/07 10:20:30 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/com.twitter_jsr166e-1.1.0.jar at spark://127.0.0.1:63305/jars/com.twitter_jsr166e-1.1.0.jar with timestamp 1533630030771
+18/08/07 10:20:30 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/joda-time_joda-time-2.3.jar at spark://127.0.0.1:63305/jars/joda-time_joda-time-2.3.jar with timestamp 1533630030771
+18/08/07 10:20:30 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/commons-beanutils_commons-beanutils-1.9.3.jar at spark://127.0.0.1:63305/jars/commons-beanutils_commons-beanutils-1.9.3.jar with timestamp 1533630030771
+18/08/07 10:20:30 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/io.netty_netty-all-4.0.33.Final.jar at spark://127.0.0.1:63305/jars/io.netty_netty-all-4.0.33.Final.jar with timestamp 1533630030772
+18/08/07 10:20:30 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/org.scala-lang_scala-reflect-2.11.8.jar at spark://127.0.0.1:63305/jars/org.scala-lang_scala-reflect-2.11.8.jar with timestamp 1533630030772
+18/08/07 10:20:30 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/commons-collections_commons-collections-3.2.2.jar at spark://127.0.0.1:63305/jars/commons-collections_commons-collections-3.2.2.jar with timestamp 1533630030772
+18/08/07 10:20:30 INFO SparkContext: Added JAR file:/C:/Users/ahi/Documents/R/win-library/3.5/sparklyr/java/sparklyr-2.3-2.11.jar at spark://127.0.0.1:63305/jars/sparklyr-2.3-2.11.jar with timestamp 1533630030773
+18/08/07 10:20:30 INFO Executor: Starting executor ID driver on host localhost
+18/08/07 10:20:30 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 63346.
+18/08/07 10:20:30 INFO NettyBlockTransferService: Server created on 127.0.0.1:63346
+18/08/07 10:20:30 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+18/08/07 10:20:30 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 63346, None)
+18/08/07 10:20:30 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.0.1:63346 with 366.3 MB RAM, BlockManagerId(driver, 127.0.0.1, 63346, None)
+18/08/07 10:20:30 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 63346, None)
+18/08/07 10:20:30 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 127.0.0.1, 63346, None)
+18/08/07 10:20:31 WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
+18/08/07 10:20:31 INFO SharedState: loading hive config file: file:/C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/conf/hive-site.xml
+18/08/07 10:20:31 INFO SharedState: Setting hive.metastore.warehouse.dir ('C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive') to the value of spark.sql.warehouse.dir ('C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive').
+18/08/07 10:20:31 INFO SharedState: Warehouse path is 'C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive'.
+18/08/07 10:20:31 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+18/08/07 10:20:33 INFO SparkContext: Starting job: collect at utils.scala:43
+18/08/07 10:20:33 INFO DAGScheduler: Got job 0 (collect at utils.scala:43) with 1 output partitions
+18/08/07 10:20:33 INFO DAGScheduler: Final stage: ResultStage 0 (collect at utils.scala:43)
+18/08/07 10:20:33 INFO DAGScheduler: Parents of final stage: List()
+18/08/07 10:20:33 INFO DAGScheduler: Missing parents: List()
+18/08/07 10:20:33 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:40), which has no missing parents
+18/08/07 10:20:33 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 5.9 KB, free 366.3 MB)
+18/08/07 10:20:33 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 3.3 KB, free 366.3 MB)
+18/08/07 10:20:33 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.0.1:63346 (size: 3.3 KB, free: 366.3 MB)
+18/08/07 10:20:33 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1039
+18/08/07 10:20:33 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:40) (first 15 tasks are for partitions Vector(0))
+18/08/07 10:20:33 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+18/08/07 10:20:33 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7880 bytes)
+18/08/07 10:20:33 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+18/08/07 10:20:33 INFO Executor: Fetching spark://127.0.0.1:63305/jars/com.twitter_jsr166e-1.1.0.jar with timestamp 1533630030771
+18/08/07 10:20:33 INFO TransportClientFactory: Successfully created connection to /127.0.0.1:63305 after 16 ms (0 ms spent in bootstraps)
+18/08/07 10:20:33 INFO Utils: Fetching spark://127.0.0.1:63305/jars/com.twitter_jsr166e-1.1.0.jar to C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081\userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f\fetchFileTemp5477348236187592412.tmp
+18/08/07 10:20:33 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-23730846-2792-47ed-996a-6e2ae913a081/userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f/com.twitter_jsr166e-1.1.0.jar to class loader
+18/08/07 10:20:33 INFO Executor: Fetching spark://127.0.0.1:63305/jars/sparklyr-2.3-2.11.jar with timestamp 1533630030773
+18/08/07 10:20:33 INFO Utils: Fetching spark://127.0.0.1:63305/jars/sparklyr-2.3-2.11.jar to C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081\userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f\fetchFileTemp6001991618967782176.tmp
+18/08/07 10:20:33 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-23730846-2792-47ed-996a-6e2ae913a081/userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f/sparklyr-2.3-2.11.jar to class loader
+18/08/07 10:20:33 INFO Executor: Fetching spark://127.0.0.1:63305/jars/commons-collections_commons-collections-3.2.2.jar with timestamp 1533630030772
+18/08/07 10:20:34 INFO Utils: Fetching spark://127.0.0.1:63305/jars/commons-collections_commons-collections-3.2.2.jar to C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081\userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f\fetchFileTemp525083648155435076.tmp
+18/08/07 10:20:34 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-23730846-2792-47ed-996a-6e2ae913a081/userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f/commons-collections_commons-collections-3.2.2.jar to class loader
+18/08/07 10:20:34 INFO Executor: Fetching spark://127.0.0.1:63305/jars/io.netty_netty-all-4.0.33.Final.jar with timestamp 1533630030772
+18/08/07 10:20:34 INFO Utils: Fetching spark://127.0.0.1:63305/jars/io.netty_netty-all-4.0.33.Final.jar to C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081\userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f\fetchFileTemp7998824996327692546.tmp
+18/08/07 10:20:34 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-23730846-2792-47ed-996a-6e2ae913a081/userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f/io.netty_netty-all-4.0.33.Final.jar to class loader
+18/08/07 10:20:34 INFO Executor: Fetching spark://127.0.0.1:63305/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar with timestamp 1533630030769
+18/08/07 10:20:34 INFO Utils: Fetching spark://127.0.0.1:63305/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar to C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081\userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f\fetchFileTemp2429173866621453231.tmp
+18/08/07 10:20:34 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-23730846-2792-47ed-996a-6e2ae913a081/userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar to class loader
+18/08/07 10:20:34 INFO Executor: Fetching spark://127.0.0.1:63305/jars/org.joda_joda-convert-1.2.jar with timestamp 1533630030770
+18/08/07 10:20:34 INFO Utils: Fetching spark://127.0.0.1:63305/jars/org.joda_joda-convert-1.2.jar to C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081\userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f\fetchFileTemp5303164862173396125.tmp
+18/08/07 10:20:34 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-23730846-2792-47ed-996a-6e2ae913a081/userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f/org.joda_joda-convert-1.2.jar to class loader
+18/08/07 10:20:34 INFO Executor: Fetching spark://127.0.0.1:63305/jars/org.scala-lang_scala-reflect-2.11.8.jar with timestamp 1533630030772
+18/08/07 10:20:34 INFO Utils: Fetching spark://127.0.0.1:63305/jars/org.scala-lang_scala-reflect-2.11.8.jar to C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081\userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f\fetchFileTemp2294432073480507619.tmp
+18/08/07 10:20:34 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-23730846-2792-47ed-996a-6e2ae913a081/userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f/org.scala-lang_scala-reflect-2.11.8.jar to class loader
+18/08/07 10:20:34 INFO Executor: Fetching spark://127.0.0.1:63305/jars/joda-time_joda-time-2.3.jar with timestamp 1533630030771
+18/08/07 10:20:34 INFO Utils: Fetching spark://127.0.0.1:63305/jars/joda-time_joda-time-2.3.jar to C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081\userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f\fetchFileTemp4771339540862893270.tmp
+18/08/07 10:20:34 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-23730846-2792-47ed-996a-6e2ae913a081/userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f/joda-time_joda-time-2.3.jar to class loader
+18/08/07 10:20:34 INFO Executor: Fetching spark://127.0.0.1:63305/jars/commons-beanutils_commons-beanutils-1.9.3.jar with timestamp 1533630030771
+18/08/07 10:20:34 INFO Utils: Fetching spark://127.0.0.1:63305/jars/commons-beanutils_commons-beanutils-1.9.3.jar to C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081\userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f\fetchFileTemp6836003662428200966.tmp
+18/08/07 10:20:34 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-23730846-2792-47ed-996a-6e2ae913a081/userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f/commons-beanutils_commons-beanutils-1.9.3.jar to class loader
+18/08/07 10:20:34 INFO CodeGenerator: Code generated in 200.383647 ms
+18/08/07 10:20:34 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1013 bytes result sent to driver
+18/08/07 10:20:34 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1047 ms on localhost (executor driver) (1/1)
+18/08/07 10:20:34 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+18/08/07 10:20:34 INFO DAGScheduler: ResultStage 0 (collect at utils.scala:43) finished in 1,230 s
+18/08/07 10:20:34 INFO DAGScheduler: Job 0 finished: collect at utils.scala:43, took 1,291172 s
+18/08/07 10:20:34 WARN SparkSession$Builder: Using an existing SparkSession; some configuration may not take effect.
+18/08/07 10:20:35 INFO Native: Could not load JNR C Library, native system calls through this library will not be available (set this logger level to DEBUG to see the full stack trace).
+18/08/07 10:20:35 INFO ClockFactory: Using java.lang.System clock to generate timestamps.
+18/08/07 10:20:35 WARN NettyUtil: Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+18/08/07 10:20:38 INFO SparkContext: Invoking stop() from shutdown hook
+18/08/07 10:20:38 INFO SerialShutdownHooks: Successfully executed shutdown hook: Clearing session cache for C* connector
+18/08/07 10:20:38 INFO SparkUI: Stopped Spark web UI at http://127.0.0.1:4040
+18/08/07 10:20:38 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+18/08/07 10:20:38 INFO MemoryStore: MemoryStore cleared
+18/08/07 10:20:38 INFO BlockManager: BlockManager stopped
+18/08/07 10:20:38 INFO BlockManagerMaster: BlockManagerMaster stopped
+18/08/07 10:20:38 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+18/08/07 10:20:38 WARN SparkEnv: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081\userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081\userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.SparkEnv.stop(SparkEnv.scala:103)
+	at org.apache.spark.SparkContext$$anonfun$stop$11.apply$mcV$sp(SparkContext.scala:1940)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1357)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1939)
+	at org.apache.spark.SparkContext$$anonfun$2.apply$mcV$sp(SparkContext.scala:572)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 10:20:38 INFO SparkContext: Successfully stopped SparkContext
+18/08/07 10:20:38 INFO ShutdownHookManager: Shutdown hook called
+18/08/07 10:20:38 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-151c9659-2230-40cb-af6d-482b2159924b
+18/08/07 10:20:38 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081\userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f
+18/08/07 10:20:38 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081\userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081\userFiles-3dc40a5f-5baa-4967-b2de-e9d57bafa86f
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 10:20:38 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081
+18/08/07 10:20:38 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-23730846-2792-47ed-996a-6e2ae913a081
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 10:34:47 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/08/07 10:34:48 INFO SparkContext: Running Spark version 2.3.0
+18/08/07 10:34:48 INFO SparkContext: Submitted application: sparklyr
+18/08/07 10:34:48 INFO SecurityManager: Changing view acls to: ahi
+18/08/07 10:34:48 INFO SecurityManager: Changing modify acls to: ahi
+18/08/07 10:34:48 INFO SecurityManager: Changing view acls groups to: 
+18/08/07 10:34:48 INFO SecurityManager: Changing modify acls groups to: 
+18/08/07 10:34:48 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ahi); groups with view permissions: Set(); users  with modify permissions: Set(ahi); groups with modify permissions: Set()
+18/08/07 10:34:48 INFO Utils: Successfully started service 'sparkDriver' on port 63726.
+18/08/07 10:34:48 INFO SparkEnv: Registering MapOutputTracker
+18/08/07 10:34:48 INFO SparkEnv: Registering BlockManagerMaster
+18/08/07 10:34:48 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+18/08/07 10:34:48 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+18/08/07 10:34:48 INFO DiskBlockManager: Created local directory at C:\Users\ahi\AppData\Local\Temp\blockmgr-58d6e1d6-a39c-439f-8aa7-944665a632fc
+18/08/07 10:34:48 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+18/08/07 10:34:48 INFO SparkEnv: Registering OutputCommitCoordinator
+18/08/07 10:34:48 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+18/08/07 10:34:49 INFO SparkUI: Bound SparkUI to 127.0.0.1, and started at http://127.0.0.1:4040
+18/08/07 10:34:49 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar at spark://127.0.0.1:63726/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar with timestamp 1533630889042
+18/08/07 10:34:49 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/org.joda_joda-convert-1.2.jar at spark://127.0.0.1:63726/jars/org.joda_joda-convert-1.2.jar with timestamp 1533630889043
+18/08/07 10:34:49 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/com.twitter_jsr166e-1.1.0.jar at spark://127.0.0.1:63726/jars/com.twitter_jsr166e-1.1.0.jar with timestamp 1533630889043
+18/08/07 10:34:49 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/joda-time_joda-time-2.3.jar at spark://127.0.0.1:63726/jars/joda-time_joda-time-2.3.jar with timestamp 1533630889043
+18/08/07 10:34:49 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/commons-beanutils_commons-beanutils-1.9.3.jar at spark://127.0.0.1:63726/jars/commons-beanutils_commons-beanutils-1.9.3.jar with timestamp 1533630889044
+18/08/07 10:34:49 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/io.netty_netty-all-4.0.33.Final.jar at spark://127.0.0.1:63726/jars/io.netty_netty-all-4.0.33.Final.jar with timestamp 1533630889044
+18/08/07 10:34:49 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/org.scala-lang_scala-reflect-2.11.8.jar at spark://127.0.0.1:63726/jars/org.scala-lang_scala-reflect-2.11.8.jar with timestamp 1533630889044
+18/08/07 10:34:49 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/commons-collections_commons-collections-3.2.2.jar at spark://127.0.0.1:63726/jars/commons-collections_commons-collections-3.2.2.jar with timestamp 1533630889044
+18/08/07 10:34:49 INFO SparkContext: Added JAR file:/C:/Users/ahi/Documents/R/win-library/3.5/sparklyr/java/sparklyr-2.3-2.11.jar at spark://127.0.0.1:63726/jars/sparklyr-2.3-2.11.jar with timestamp 1533630889045
+18/08/07 10:34:49 INFO Executor: Starting executor ID driver on host localhost
+18/08/07 10:34:49 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 63767.
+18/08/07 10:34:49 INFO NettyBlockTransferService: Server created on 127.0.0.1:63767
+18/08/07 10:34:49 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+18/08/07 10:34:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 63767, None)
+18/08/07 10:34:49 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.0.1:63767 with 366.3 MB RAM, BlockManagerId(driver, 127.0.0.1, 63767, None)
+18/08/07 10:34:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 63767, None)
+18/08/07 10:34:49 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 127.0.0.1, 63767, None)
+18/08/07 10:34:49 WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
+18/08/07 10:34:49 INFO SharedState: loading hive config file: file:/C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/conf/hive-site.xml
+18/08/07 10:34:49 INFO SharedState: Setting hive.metastore.warehouse.dir ('C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive') to the value of spark.sql.warehouse.dir ('C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive').
+18/08/07 10:34:49 INFO SharedState: Warehouse path is 'C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive'.
+18/08/07 10:34:49 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+18/08/07 10:34:51 INFO SparkContext: Starting job: collect at utils.scala:43
+18/08/07 10:34:51 INFO DAGScheduler: Got job 0 (collect at utils.scala:43) with 1 output partitions
+18/08/07 10:34:51 INFO DAGScheduler: Final stage: ResultStage 0 (collect at utils.scala:43)
+18/08/07 10:34:51 INFO DAGScheduler: Parents of final stage: List()
+18/08/07 10:34:51 INFO DAGScheduler: Missing parents: List()
+18/08/07 10:34:51 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:40), which has no missing parents
+18/08/07 10:34:51 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 5.9 KB, free 366.3 MB)
+18/08/07 10:34:51 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 3.3 KB, free 366.3 MB)
+18/08/07 10:34:51 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.0.1:63767 (size: 3.3 KB, free: 366.3 MB)
+18/08/07 10:34:51 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1039
+18/08/07 10:34:51 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:40) (first 15 tasks are for partitions Vector(0))
+18/08/07 10:34:51 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+18/08/07 10:34:51 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7880 bytes)
+18/08/07 10:34:51 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+18/08/07 10:34:51 INFO Executor: Fetching spark://127.0.0.1:63726/jars/io.netty_netty-all-4.0.33.Final.jar with timestamp 1533630889044
+18/08/07 10:34:51 INFO TransportClientFactory: Successfully created connection to /127.0.0.1:63726 after 14 ms (0 ms spent in bootstraps)
+18/08/07 10:34:51 INFO Utils: Fetching spark://127.0.0.1:63726/jars/io.netty_netty-all-4.0.33.Final.jar to C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff\userFiles-5adaba34-ef8b-478f-85c9-26839459e598\fetchFileTemp7781201950754712192.tmp
+18/08/07 10:34:51 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff/userFiles-5adaba34-ef8b-478f-85c9-26839459e598/io.netty_netty-all-4.0.33.Final.jar to class loader
+18/08/07 10:34:51 INFO Executor: Fetching spark://127.0.0.1:63726/jars/com.twitter_jsr166e-1.1.0.jar with timestamp 1533630889043
+18/08/07 10:34:51 INFO Utils: Fetching spark://127.0.0.1:63726/jars/com.twitter_jsr166e-1.1.0.jar to C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff\userFiles-5adaba34-ef8b-478f-85c9-26839459e598\fetchFileTemp3267413616892449518.tmp
+18/08/07 10:34:51 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff/userFiles-5adaba34-ef8b-478f-85c9-26839459e598/com.twitter_jsr166e-1.1.0.jar to class loader
+18/08/07 10:34:51 INFO Executor: Fetching spark://127.0.0.1:63726/jars/joda-time_joda-time-2.3.jar with timestamp 1533630889043
+18/08/07 10:34:51 INFO Utils: Fetching spark://127.0.0.1:63726/jars/joda-time_joda-time-2.3.jar to C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff\userFiles-5adaba34-ef8b-478f-85c9-26839459e598\fetchFileTemp6548575653865340229.tmp
+18/08/07 10:34:51 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff/userFiles-5adaba34-ef8b-478f-85c9-26839459e598/joda-time_joda-time-2.3.jar to class loader
+18/08/07 10:34:51 INFO Executor: Fetching spark://127.0.0.1:63726/jars/commons-beanutils_commons-beanutils-1.9.3.jar with timestamp 1533630889044
+18/08/07 10:34:51 INFO Utils: Fetching spark://127.0.0.1:63726/jars/commons-beanutils_commons-beanutils-1.9.3.jar to C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff\userFiles-5adaba34-ef8b-478f-85c9-26839459e598\fetchFileTemp3104909173119552176.tmp
+18/08/07 10:34:51 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff/userFiles-5adaba34-ef8b-478f-85c9-26839459e598/commons-beanutils_commons-beanutils-1.9.3.jar to class loader
+18/08/07 10:34:51 INFO Executor: Fetching spark://127.0.0.1:63726/jars/org.scala-lang_scala-reflect-2.11.8.jar with timestamp 1533630889044
+18/08/07 10:34:51 INFO Utils: Fetching spark://127.0.0.1:63726/jars/org.scala-lang_scala-reflect-2.11.8.jar to C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff\userFiles-5adaba34-ef8b-478f-85c9-26839459e598\fetchFileTemp4253004058133852750.tmp
+18/08/07 10:34:51 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff/userFiles-5adaba34-ef8b-478f-85c9-26839459e598/org.scala-lang_scala-reflect-2.11.8.jar to class loader
+18/08/07 10:34:51 INFO Executor: Fetching spark://127.0.0.1:63726/jars/commons-collections_commons-collections-3.2.2.jar with timestamp 1533630889044
+18/08/07 10:34:51 INFO Utils: Fetching spark://127.0.0.1:63726/jars/commons-collections_commons-collections-3.2.2.jar to C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff\userFiles-5adaba34-ef8b-478f-85c9-26839459e598\fetchFileTemp3530064477094919313.tmp
+18/08/07 10:34:51 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff/userFiles-5adaba34-ef8b-478f-85c9-26839459e598/commons-collections_commons-collections-3.2.2.jar to class loader
+18/08/07 10:34:51 INFO Executor: Fetching spark://127.0.0.1:63726/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar with timestamp 1533630889042
+18/08/07 10:34:51 INFO Utils: Fetching spark://127.0.0.1:63726/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar to C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff\userFiles-5adaba34-ef8b-478f-85c9-26839459e598\fetchFileTemp1069153058506346091.tmp
+18/08/07 10:34:52 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff/userFiles-5adaba34-ef8b-478f-85c9-26839459e598/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar to class loader
+18/08/07 10:34:52 INFO Executor: Fetching spark://127.0.0.1:63726/jars/org.joda_joda-convert-1.2.jar with timestamp 1533630889043
+18/08/07 10:34:52 INFO Utils: Fetching spark://127.0.0.1:63726/jars/org.joda_joda-convert-1.2.jar to C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff\userFiles-5adaba34-ef8b-478f-85c9-26839459e598\fetchFileTemp3954360617138650489.tmp
+18/08/07 10:34:52 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff/userFiles-5adaba34-ef8b-478f-85c9-26839459e598/org.joda_joda-convert-1.2.jar to class loader
+18/08/07 10:34:52 INFO Executor: Fetching spark://127.0.0.1:63726/jars/sparklyr-2.3-2.11.jar with timestamp 1533630889045
+18/08/07 10:34:52 INFO Utils: Fetching spark://127.0.0.1:63726/jars/sparklyr-2.3-2.11.jar to C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff\userFiles-5adaba34-ef8b-478f-85c9-26839459e598\fetchFileTemp4728486045930116687.tmp
+18/08/07 10:34:52 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff/userFiles-5adaba34-ef8b-478f-85c9-26839459e598/sparklyr-2.3-2.11.jar to class loader
+18/08/07 10:34:52 INFO CodeGenerator: Code generated in 169.758528 ms
+18/08/07 10:34:52 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 970 bytes result sent to driver
+18/08/07 10:34:52 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 873 ms on localhost (executor driver) (1/1)
+18/08/07 10:34:52 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+18/08/07 10:34:52 INFO DAGScheduler: ResultStage 0 (collect at utils.scala:43) finished in 1,017 s
+18/08/07 10:34:52 INFO DAGScheduler: Job 0 finished: collect at utils.scala:43, took 1,063385 s
+18/08/07 10:34:52 WARN SparkSession$Builder: Using an existing SparkSession; some configuration may not take effect.
+18/08/07 10:34:52 INFO Native: Could not load JNR C Library, native system calls through this library will not be available (set this logger level to DEBUG to see the full stack trace).
+18/08/07 10:34:52 INFO ClockFactory: Using java.lang.System clock to generate timestamps.
+18/08/07 10:34:52 WARN NettyUtil: Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+18/08/07 10:34:56 INFO SparkContext: Invoking stop() from shutdown hook
+18/08/07 10:34:56 INFO SerialShutdownHooks: Successfully executed shutdown hook: Clearing session cache for C* connector
+18/08/07 10:34:56 INFO SparkUI: Stopped Spark web UI at http://127.0.0.1:4040
+18/08/07 10:34:56 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+18/08/07 10:34:56 INFO MemoryStore: MemoryStore cleared
+18/08/07 10:34:56 INFO BlockManager: BlockManager stopped
+18/08/07 10:34:56 INFO BlockManagerMaster: BlockManagerMaster stopped
+18/08/07 10:34:56 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+18/08/07 10:34:56 WARN SparkEnv: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff\userFiles-5adaba34-ef8b-478f-85c9-26839459e598
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff\userFiles-5adaba34-ef8b-478f-85c9-26839459e598
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.SparkEnv.stop(SparkEnv.scala:103)
+	at org.apache.spark.SparkContext$$anonfun$stop$11.apply$mcV$sp(SparkContext.scala:1940)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1357)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1939)
+	at org.apache.spark.SparkContext$$anonfun$2.apply$mcV$sp(SparkContext.scala:572)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 10:34:56 INFO SparkContext: Successfully stopped SparkContext
+18/08/07 10:34:56 INFO ShutdownHookManager: Shutdown hook called
+18/08/07 10:34:56 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff\userFiles-5adaba34-ef8b-478f-85c9-26839459e598
+18/08/07 10:34:56 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff\userFiles-5adaba34-ef8b-478f-85c9-26839459e598
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff\userFiles-5adaba34-ef8b-478f-85c9-26839459e598
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 10:34:56 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff
+18/08/07 10:34:56 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-65660d97-b33b-4e08-8f2a-9b67a63d57ff
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 10:34:56 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-c76793c3-8765-43be-a659-c9134770ce0d
+18/08/07 10:36:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/08/07 10:36:07 INFO SparkContext: Running Spark version 2.3.0
+18/08/07 10:36:07 INFO SparkContext: Submitted application: sparklyr
+18/08/07 10:36:07 INFO SecurityManager: Changing view acls to: ahi
+18/08/07 10:36:07 INFO SecurityManager: Changing modify acls to: ahi
+18/08/07 10:36:07 INFO SecurityManager: Changing view acls groups to: 
+18/08/07 10:36:07 INFO SecurityManager: Changing modify acls groups to: 
+18/08/07 10:36:07 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ahi); groups with view permissions: Set(); users  with modify permissions: Set(ahi); groups with modify permissions: Set()
+18/08/07 10:36:07 INFO Utils: Successfully started service 'sparkDriver' on port 63895.
+18/08/07 10:36:07 INFO SparkEnv: Registering MapOutputTracker
+18/08/07 10:36:07 INFO SparkEnv: Registering BlockManagerMaster
+18/08/07 10:36:07 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+18/08/07 10:36:07 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+18/08/07 10:36:07 INFO DiskBlockManager: Created local directory at C:\Users\ahi\AppData\Local\Temp\blockmgr-8a63cfb2-0160-43ce-99f5-365616ad934e
+18/08/07 10:36:07 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+18/08/07 10:36:07 INFO SparkEnv: Registering OutputCommitCoordinator
+18/08/07 10:36:07 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+18/08/07 10:36:07 INFO SparkUI: Bound SparkUI to 127.0.0.1, and started at http://127.0.0.1:4040
+18/08/07 10:36:07 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar at spark://127.0.0.1:63895/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar with timestamp 1533630967775
+18/08/07 10:36:07 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/org.joda_joda-convert-1.2.jar at spark://127.0.0.1:63895/jars/org.joda_joda-convert-1.2.jar with timestamp 1533630967776
+18/08/07 10:36:07 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/com.twitter_jsr166e-1.1.0.jar at spark://127.0.0.1:63895/jars/com.twitter_jsr166e-1.1.0.jar with timestamp 1533630967776
+18/08/07 10:36:07 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/joda-time_joda-time-2.3.jar at spark://127.0.0.1:63895/jars/joda-time_joda-time-2.3.jar with timestamp 1533630967777
+18/08/07 10:36:07 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/commons-beanutils_commons-beanutils-1.9.3.jar at spark://127.0.0.1:63895/jars/commons-beanutils_commons-beanutils-1.9.3.jar with timestamp 1533630967777
+18/08/07 10:36:07 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/io.netty_netty-all-4.0.33.Final.jar at spark://127.0.0.1:63895/jars/io.netty_netty-all-4.0.33.Final.jar with timestamp 1533630967777
+18/08/07 10:36:07 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/org.scala-lang_scala-reflect-2.11.8.jar at spark://127.0.0.1:63895/jars/org.scala-lang_scala-reflect-2.11.8.jar with timestamp 1533630967778
+18/08/07 10:36:07 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/commons-collections_commons-collections-3.2.2.jar at spark://127.0.0.1:63895/jars/commons-collections_commons-collections-3.2.2.jar with timestamp 1533630967778
+18/08/07 10:36:07 INFO SparkContext: Added JAR file:/C:/Users/ahi/Documents/R/win-library/3.5/sparklyr/java/sparklyr-2.3-2.11.jar at spark://127.0.0.1:63895/jars/sparklyr-2.3-2.11.jar with timestamp 1533630967778
+18/08/07 10:36:07 INFO Executor: Starting executor ID driver on host localhost
+18/08/07 10:36:07 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 63936.
+18/08/07 10:36:07 INFO NettyBlockTransferService: Server created on 127.0.0.1:63936
+18/08/07 10:36:07 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+18/08/07 10:36:07 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 63936, None)
+18/08/07 10:36:07 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.0.1:63936 with 366.3 MB RAM, BlockManagerId(driver, 127.0.0.1, 63936, None)
+18/08/07 10:36:07 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 63936, None)
+18/08/07 10:36:07 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 127.0.0.1, 63936, None)
+18/08/07 10:36:08 WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
+18/08/07 10:36:08 INFO SharedState: loading hive config file: file:/C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/conf/hive-site.xml
+18/08/07 10:36:08 INFO SharedState: Setting hive.metastore.warehouse.dir ('C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive') to the value of spark.sql.warehouse.dir ('C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive').
+18/08/07 10:36:08 INFO SharedState: Warehouse path is 'C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive'.
+18/08/07 10:36:08 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+18/08/07 10:36:10 INFO SparkContext: Starting job: collect at utils.scala:43
+18/08/07 10:36:10 INFO DAGScheduler: Got job 0 (collect at utils.scala:43) with 1 output partitions
+18/08/07 10:36:10 INFO DAGScheduler: Final stage: ResultStage 0 (collect at utils.scala:43)
+18/08/07 10:36:10 INFO DAGScheduler: Parents of final stage: List()
+18/08/07 10:36:10 INFO DAGScheduler: Missing parents: List()
+18/08/07 10:36:10 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:40), which has no missing parents
+18/08/07 10:36:10 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 5.9 KB, free 366.3 MB)
+18/08/07 10:36:10 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 3.3 KB, free 366.3 MB)
+18/08/07 10:36:10 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.0.1:63936 (size: 3.3 KB, free: 366.3 MB)
+18/08/07 10:36:10 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1039
+18/08/07 10:36:10 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:40) (first 15 tasks are for partitions Vector(0))
+18/08/07 10:36:10 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+18/08/07 10:36:10 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7880 bytes)
+18/08/07 10:36:10 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+18/08/07 10:36:10 INFO Executor: Fetching spark://127.0.0.1:63895/jars/commons-collections_commons-collections-3.2.2.jar with timestamp 1533630967778
+18/08/07 10:36:10 INFO TransportClientFactory: Successfully created connection to /127.0.0.1:63895 after 13 ms (0 ms spent in bootstraps)
+18/08/07 10:36:10 INFO Utils: Fetching spark://127.0.0.1:63895/jars/commons-collections_commons-collections-3.2.2.jar to C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54\userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5\fetchFileTemp1511213527520032865.tmp
+18/08/07 10:36:10 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54/userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5/commons-collections_commons-collections-3.2.2.jar to class loader
+18/08/07 10:36:10 INFO Executor: Fetching spark://127.0.0.1:63895/jars/org.joda_joda-convert-1.2.jar with timestamp 1533630967776
+18/08/07 10:36:10 INFO Utils: Fetching spark://127.0.0.1:63895/jars/org.joda_joda-convert-1.2.jar to C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54\userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5\fetchFileTemp1120442888876083197.tmp
+18/08/07 10:36:10 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54/userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5/org.joda_joda-convert-1.2.jar to class loader
+18/08/07 10:36:10 INFO Executor: Fetching spark://127.0.0.1:63895/jars/sparklyr-2.3-2.11.jar with timestamp 1533630967778
+18/08/07 10:36:10 INFO Utils: Fetching spark://127.0.0.1:63895/jars/sparklyr-2.3-2.11.jar to C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54\userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5\fetchFileTemp183163485947151676.tmp
+18/08/07 10:36:10 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54/userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5/sparklyr-2.3-2.11.jar to class loader
+18/08/07 10:36:10 INFO Executor: Fetching spark://127.0.0.1:63895/jars/joda-time_joda-time-2.3.jar with timestamp 1533630967777
+18/08/07 10:36:10 INFO Utils: Fetching spark://127.0.0.1:63895/jars/joda-time_joda-time-2.3.jar to C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54\userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5\fetchFileTemp1242282494305360068.tmp
+18/08/07 10:36:10 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54/userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5/joda-time_joda-time-2.3.jar to class loader
+18/08/07 10:36:10 INFO Executor: Fetching spark://127.0.0.1:63895/jars/io.netty_netty-all-4.0.33.Final.jar with timestamp 1533630967777
+18/08/07 10:36:10 INFO Utils: Fetching spark://127.0.0.1:63895/jars/io.netty_netty-all-4.0.33.Final.jar to C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54\userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5\fetchFileTemp3820908322073669460.tmp
+18/08/07 10:36:10 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54/userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5/io.netty_netty-all-4.0.33.Final.jar to class loader
+18/08/07 10:36:10 INFO Executor: Fetching spark://127.0.0.1:63895/jars/commons-beanutils_commons-beanutils-1.9.3.jar with timestamp 1533630967777
+18/08/07 10:36:10 INFO Utils: Fetching spark://127.0.0.1:63895/jars/commons-beanutils_commons-beanutils-1.9.3.jar to C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54\userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5\fetchFileTemp9111805669604437710.tmp
+18/08/07 10:36:10 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54/userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5/commons-beanutils_commons-beanutils-1.9.3.jar to class loader
+18/08/07 10:36:10 INFO Executor: Fetching spark://127.0.0.1:63895/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar with timestamp 1533630967775
+18/08/07 10:36:10 INFO Utils: Fetching spark://127.0.0.1:63895/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar to C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54\userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5\fetchFileTemp5000136085416872039.tmp
+18/08/07 10:36:10 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54/userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar to class loader
+18/08/07 10:36:10 INFO Executor: Fetching spark://127.0.0.1:63895/jars/org.scala-lang_scala-reflect-2.11.8.jar with timestamp 1533630967778
+18/08/07 10:36:10 INFO Utils: Fetching spark://127.0.0.1:63895/jars/org.scala-lang_scala-reflect-2.11.8.jar to C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54\userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5\fetchFileTemp3144229040721178005.tmp
+18/08/07 10:36:10 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54/userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5/org.scala-lang_scala-reflect-2.11.8.jar to class loader
+18/08/07 10:36:10 INFO Executor: Fetching spark://127.0.0.1:63895/jars/com.twitter_jsr166e-1.1.0.jar with timestamp 1533630967776
+18/08/07 10:36:10 INFO Utils: Fetching spark://127.0.0.1:63895/jars/com.twitter_jsr166e-1.1.0.jar to C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54\userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5\fetchFileTemp2527878916842218366.tmp
+18/08/07 10:36:10 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54/userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5/com.twitter_jsr166e-1.1.0.jar to class loader
+18/08/07 10:36:11 INFO CodeGenerator: Code generated in 179.166696 ms
+18/08/07 10:36:11 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 970 bytes result sent to driver
+18/08/07 10:36:11 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 874 ms on localhost (executor driver) (1/1)
+18/08/07 10:36:11 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+18/08/07 10:36:11 INFO DAGScheduler: ResultStage 0 (collect at utils.scala:43) finished in 1,011 s
+18/08/07 10:36:11 INFO DAGScheduler: Job 0 finished: collect at utils.scala:43, took 1,063404 s
+18/08/07 10:36:11 WARN SparkSession$Builder: Using an existing SparkSession; some configuration may not take effect.
+18/08/07 10:36:11 INFO Native: Could not load JNR C Library, native system calls through this library will not be available (set this logger level to DEBUG to see the full stack trace).
+18/08/07 10:36:11 INFO ClockFactory: Using java.lang.System clock to generate timestamps.
+18/08/07 10:36:11 WARN NettyUtil: Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+18/08/07 10:36:14 INFO SparkContext: Invoking stop() from shutdown hook
+18/08/07 10:36:14 INFO SerialShutdownHooks: Successfully executed shutdown hook: Clearing session cache for C* connector
+18/08/07 10:36:14 INFO SparkUI: Stopped Spark web UI at http://127.0.0.1:4040
+18/08/07 10:36:15 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+18/08/07 10:36:15 INFO MemoryStore: MemoryStore cleared
+18/08/07 10:36:15 INFO BlockManager: BlockManager stopped
+18/08/07 10:36:15 INFO BlockManagerMaster: BlockManagerMaster stopped
+18/08/07 10:36:15 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+18/08/07 10:36:15 WARN SparkEnv: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54\userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54\userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.SparkEnv.stop(SparkEnv.scala:103)
+	at org.apache.spark.SparkContext$$anonfun$stop$11.apply$mcV$sp(SparkContext.scala:1940)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1357)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1939)
+	at org.apache.spark.SparkContext$$anonfun$2.apply$mcV$sp(SparkContext.scala:572)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 10:36:15 INFO SparkContext: Successfully stopped SparkContext
+18/08/07 10:36:15 INFO ShutdownHookManager: Shutdown hook called
+18/08/07 10:36:15 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54\userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5
+18/08/07 10:36:15 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54\userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54\userFiles-ee6ae2a9-f054-4528-8152-588e8a05c8b5
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 10:36:15 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54
+18/08/07 10:36:15 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-adf7bc18-7889-4d59-a7e5-396c68bfdf54
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 10:36:15 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-b41b939c-36a0-4dc4-b9e0-ea5da14cfe88
+18/08/07 10:45:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/08/07 10:45:59 INFO SparkContext: Running Spark version 2.3.0
+18/08/07 10:45:59 INFO SparkContext: Submitted application: sparklyr
+18/08/07 10:45:59 INFO SecurityManager: Changing view acls to: ahi
+18/08/07 10:45:59 INFO SecurityManager: Changing modify acls to: ahi
+18/08/07 10:45:59 INFO SecurityManager: Changing view acls groups to: 
+18/08/07 10:45:59 INFO SecurityManager: Changing modify acls groups to: 
+18/08/07 10:45:59 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ahi); groups with view permissions: Set(); users  with modify permissions: Set(ahi); groups with modify permissions: Set()
+18/08/07 10:45:59 INFO Utils: Successfully started service 'sparkDriver' on port 64188.
+18/08/07 10:45:59 INFO SparkEnv: Registering MapOutputTracker
+18/08/07 10:45:59 INFO SparkEnv: Registering BlockManagerMaster
+18/08/07 10:45:59 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+18/08/07 10:45:59 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+18/08/07 10:45:59 INFO DiskBlockManager: Created local directory at C:\Users\ahi\AppData\Local\Temp\blockmgr-5e6d82da-f35d-49de-9f8b-7309010daa55
+18/08/07 10:45:59 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+18/08/07 10:45:59 INFO SparkEnv: Registering OutputCommitCoordinator
+18/08/07 10:45:59 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+18/08/07 10:45:59 INFO SparkUI: Bound SparkUI to 127.0.0.1, and started at http://127.0.0.1:4040
+18/08/07 10:45:59 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar at spark://127.0.0.1:64188/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar with timestamp 1533631559781
+18/08/07 10:45:59 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/org.joda_joda-convert-1.2.jar at spark://127.0.0.1:64188/jars/org.joda_joda-convert-1.2.jar with timestamp 1533631559781
+18/08/07 10:45:59 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/com.twitter_jsr166e-1.1.0.jar at spark://127.0.0.1:64188/jars/com.twitter_jsr166e-1.1.0.jar with timestamp 1533631559782
+18/08/07 10:45:59 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/joda-time_joda-time-2.3.jar at spark://127.0.0.1:64188/jars/joda-time_joda-time-2.3.jar with timestamp 1533631559782
+18/08/07 10:45:59 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/commons-beanutils_commons-beanutils-1.9.3.jar at spark://127.0.0.1:64188/jars/commons-beanutils_commons-beanutils-1.9.3.jar with timestamp 1533631559782
+18/08/07 10:45:59 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/io.netty_netty-all-4.0.33.Final.jar at spark://127.0.0.1:64188/jars/io.netty_netty-all-4.0.33.Final.jar with timestamp 1533631559783
+18/08/07 10:45:59 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/org.scala-lang_scala-reflect-2.11.8.jar at spark://127.0.0.1:64188/jars/org.scala-lang_scala-reflect-2.11.8.jar with timestamp 1533631559783
+18/08/07 10:45:59 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/commons-collections_commons-collections-3.2.2.jar at spark://127.0.0.1:64188/jars/commons-collections_commons-collections-3.2.2.jar with timestamp 1533631559783
+18/08/07 10:45:59 INFO SparkContext: Added JAR file:/C:/Users/ahi/Documents/R/win-library/3.5/sparklyr/java/sparklyr-2.3-2.11.jar at spark://127.0.0.1:64188/jars/sparklyr-2.3-2.11.jar with timestamp 1533631559784
+18/08/07 10:45:59 INFO Executor: Starting executor ID driver on host localhost
+18/08/07 10:45:59 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 64229.
+18/08/07 10:45:59 INFO NettyBlockTransferService: Server created on 127.0.0.1:64229
+18/08/07 10:45:59 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+18/08/07 10:45:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 64229, None)
+18/08/07 10:45:59 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.0.1:64229 with 366.3 MB RAM, BlockManagerId(driver, 127.0.0.1, 64229, None)
+18/08/07 10:45:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 64229, None)
+18/08/07 10:45:59 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 127.0.0.1, 64229, None)
+18/08/07 10:46:00 WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
+18/08/07 10:46:00 INFO SharedState: loading hive config file: file:/C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/conf/hive-site.xml
+18/08/07 10:46:00 INFO SharedState: Setting hive.metastore.warehouse.dir ('C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive') to the value of spark.sql.warehouse.dir ('C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive').
+18/08/07 10:46:00 INFO SharedState: Warehouse path is 'C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive'.
+18/08/07 10:46:00 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+18/08/07 10:46:02 INFO SparkContext: Starting job: collect at utils.scala:43
+18/08/07 10:46:02 INFO DAGScheduler: Got job 0 (collect at utils.scala:43) with 1 output partitions
+18/08/07 10:46:02 INFO DAGScheduler: Final stage: ResultStage 0 (collect at utils.scala:43)
+18/08/07 10:46:02 INFO DAGScheduler: Parents of final stage: List()
+18/08/07 10:46:02 INFO DAGScheduler: Missing parents: List()
+18/08/07 10:46:02 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:40), which has no missing parents
+18/08/07 10:46:02 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 5.9 KB, free 366.3 MB)
+18/08/07 10:46:02 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 3.3 KB, free 366.3 MB)
+18/08/07 10:46:02 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.0.1:64229 (size: 3.3 KB, free: 366.3 MB)
+18/08/07 10:46:02 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1039
+18/08/07 10:46:02 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:40) (first 15 tasks are for partitions Vector(0))
+18/08/07 10:46:02 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+18/08/07 10:46:02 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7880 bytes)
+18/08/07 10:46:02 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+18/08/07 10:46:02 INFO Executor: Fetching spark://127.0.0.1:64188/jars/sparklyr-2.3-2.11.jar with timestamp 1533631559784
+18/08/07 10:46:02 INFO TransportClientFactory: Successfully created connection to /127.0.0.1:64188 after 14 ms (0 ms spent in bootstraps)
+18/08/07 10:46:02 INFO Utils: Fetching spark://127.0.0.1:64188/jars/sparklyr-2.3-2.11.jar to C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc\userFiles-61da67dd-deeb-407f-b405-5eadac2240cb\fetchFileTemp6375884724570906698.tmp
+18/08/07 10:46:02 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc/userFiles-61da67dd-deeb-407f-b405-5eadac2240cb/sparklyr-2.3-2.11.jar to class loader
+18/08/07 10:46:02 INFO Executor: Fetching spark://127.0.0.1:64188/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar with timestamp 1533631559781
+18/08/07 10:46:02 INFO Utils: Fetching spark://127.0.0.1:64188/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar to C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc\userFiles-61da67dd-deeb-407f-b405-5eadac2240cb\fetchFileTemp2544939395778635697.tmp
+18/08/07 10:46:02 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc/userFiles-61da67dd-deeb-407f-b405-5eadac2240cb/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar to class loader
+18/08/07 10:46:02 INFO Executor: Fetching spark://127.0.0.1:64188/jars/org.scala-lang_scala-reflect-2.11.8.jar with timestamp 1533631559783
+18/08/07 10:46:02 INFO Utils: Fetching spark://127.0.0.1:64188/jars/org.scala-lang_scala-reflect-2.11.8.jar to C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc\userFiles-61da67dd-deeb-407f-b405-5eadac2240cb\fetchFileTemp2680883102297651641.tmp
+18/08/07 10:46:02 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc/userFiles-61da67dd-deeb-407f-b405-5eadac2240cb/org.scala-lang_scala-reflect-2.11.8.jar to class loader
+18/08/07 10:46:02 INFO Executor: Fetching spark://127.0.0.1:64188/jars/io.netty_netty-all-4.0.33.Final.jar with timestamp 1533631559783
+18/08/07 10:46:02 INFO Utils: Fetching spark://127.0.0.1:64188/jars/io.netty_netty-all-4.0.33.Final.jar to C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc\userFiles-61da67dd-deeb-407f-b405-5eadac2240cb\fetchFileTemp5808801751878192772.tmp
+18/08/07 10:46:02 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc/userFiles-61da67dd-deeb-407f-b405-5eadac2240cb/io.netty_netty-all-4.0.33.Final.jar to class loader
+18/08/07 10:46:02 INFO Executor: Fetching spark://127.0.0.1:64188/jars/com.twitter_jsr166e-1.1.0.jar with timestamp 1533631559782
+18/08/07 10:46:02 INFO Utils: Fetching spark://127.0.0.1:64188/jars/com.twitter_jsr166e-1.1.0.jar to C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc\userFiles-61da67dd-deeb-407f-b405-5eadac2240cb\fetchFileTemp578929011881553350.tmp
+18/08/07 10:46:02 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc/userFiles-61da67dd-deeb-407f-b405-5eadac2240cb/com.twitter_jsr166e-1.1.0.jar to class loader
+18/08/07 10:46:02 INFO Executor: Fetching spark://127.0.0.1:64188/jars/commons-collections_commons-collections-3.2.2.jar with timestamp 1533631559783
+18/08/07 10:46:02 INFO Utils: Fetching spark://127.0.0.1:64188/jars/commons-collections_commons-collections-3.2.2.jar to C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc\userFiles-61da67dd-deeb-407f-b405-5eadac2240cb\fetchFileTemp6799382023182005763.tmp
+18/08/07 10:46:02 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc/userFiles-61da67dd-deeb-407f-b405-5eadac2240cb/commons-collections_commons-collections-3.2.2.jar to class loader
+18/08/07 10:46:02 INFO Executor: Fetching spark://127.0.0.1:64188/jars/org.joda_joda-convert-1.2.jar with timestamp 1533631559781
+18/08/07 10:46:02 INFO Utils: Fetching spark://127.0.0.1:64188/jars/org.joda_joda-convert-1.2.jar to C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc\userFiles-61da67dd-deeb-407f-b405-5eadac2240cb\fetchFileTemp3433457809716033527.tmp
+18/08/07 10:46:02 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc/userFiles-61da67dd-deeb-407f-b405-5eadac2240cb/org.joda_joda-convert-1.2.jar to class loader
+18/08/07 10:46:02 INFO Executor: Fetching spark://127.0.0.1:64188/jars/joda-time_joda-time-2.3.jar with timestamp 1533631559782
+18/08/07 10:46:02 INFO Utils: Fetching spark://127.0.0.1:64188/jars/joda-time_joda-time-2.3.jar to C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc\userFiles-61da67dd-deeb-407f-b405-5eadac2240cb\fetchFileTemp264487774884082327.tmp
+18/08/07 10:46:02 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc/userFiles-61da67dd-deeb-407f-b405-5eadac2240cb/joda-time_joda-time-2.3.jar to class loader
+18/08/07 10:46:02 INFO Executor: Fetching spark://127.0.0.1:64188/jars/commons-beanutils_commons-beanutils-1.9.3.jar with timestamp 1533631559782
+18/08/07 10:46:02 INFO Utils: Fetching spark://127.0.0.1:64188/jars/commons-beanutils_commons-beanutils-1.9.3.jar to C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc\userFiles-61da67dd-deeb-407f-b405-5eadac2240cb\fetchFileTemp994635189034549665.tmp
+18/08/07 10:46:02 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc/userFiles-61da67dd-deeb-407f-b405-5eadac2240cb/commons-beanutils_commons-beanutils-1.9.3.jar to class loader
+18/08/07 10:46:03 INFO CodeGenerator: Code generated in 172.084388 ms
+18/08/07 10:46:03 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 970 bytes result sent to driver
+18/08/07 10:46:03 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 878 ms on localhost (executor driver) (1/1)
+18/08/07 10:46:03 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+18/08/07 10:46:03 INFO DAGScheduler: ResultStage 0 (collect at utils.scala:43) finished in 1,020 s
+18/08/07 10:46:03 INFO DAGScheduler: Job 0 finished: collect at utils.scala:43, took 1,067092 s
+18/08/07 10:46:03 WARN SparkSession$Builder: Using an existing SparkSession; some configuration may not take effect.
+18/08/07 10:46:03 INFO Native: Could not load JNR C Library, native system calls through this library will not be available (set this logger level to DEBUG to see the full stack trace).
+18/08/07 10:46:03 INFO ClockFactory: Using java.lang.System clock to generate timestamps.
+18/08/07 10:46:03 WARN NettyUtil: Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+18/08/07 10:46:06 INFO SparkContext: Invoking stop() from shutdown hook
+18/08/07 10:46:07 INFO SerialShutdownHooks: Successfully executed shutdown hook: Clearing session cache for C* connector
+18/08/07 10:46:07 INFO SparkUI: Stopped Spark web UI at http://127.0.0.1:4040
+18/08/07 10:46:07 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+18/08/07 10:46:07 INFO MemoryStore: MemoryStore cleared
+18/08/07 10:46:07 INFO BlockManager: BlockManager stopped
+18/08/07 10:46:07 INFO BlockManagerMaster: BlockManagerMaster stopped
+18/08/07 10:46:07 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+18/08/07 10:46:07 WARN SparkEnv: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc\userFiles-61da67dd-deeb-407f-b405-5eadac2240cb
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc\userFiles-61da67dd-deeb-407f-b405-5eadac2240cb
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.SparkEnv.stop(SparkEnv.scala:103)
+	at org.apache.spark.SparkContext$$anonfun$stop$11.apply$mcV$sp(SparkContext.scala:1940)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1357)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1939)
+	at org.apache.spark.SparkContext$$anonfun$2.apply$mcV$sp(SparkContext.scala:572)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 10:46:07 INFO SparkContext: Successfully stopped SparkContext
+18/08/07 10:46:07 INFO ShutdownHookManager: Shutdown hook called
+18/08/07 10:46:07 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-12549d3f-71d9-46a6-b40d-8f8abd0253e2
+18/08/07 10:46:07 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc
+18/08/07 10:46:07 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 10:46:07 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc\userFiles-61da67dd-deeb-407f-b405-5eadac2240cb
+18/08/07 10:46:07 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc\userFiles-61da67dd-deeb-407f-b405-5eadac2240cb
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-85fc2c0a-e1b1-4ca9-a81d-d2e0be6a3efc\userFiles-61da67dd-deeb-407f-b405-5eadac2240cb
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 10:46:30 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/08/07 10:46:31 INFO SparkContext: Running Spark version 2.3.0
+18/08/07 10:46:31 INFO SparkContext: Submitted application: sparklyr
+18/08/07 10:46:31 INFO SecurityManager: Changing view acls to: ahi
+18/08/07 10:46:31 INFO SecurityManager: Changing modify acls to: ahi
+18/08/07 10:46:31 INFO SecurityManager: Changing view acls groups to: 
+18/08/07 10:46:31 INFO SecurityManager: Changing modify acls groups to: 
+18/08/07 10:46:31 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ahi); groups with view permissions: Set(); users  with modify permissions: Set(ahi); groups with modify permissions: Set()
+18/08/07 10:46:32 INFO Utils: Successfully started service 'sparkDriver' on port 64348.
+18/08/07 10:46:32 INFO SparkEnv: Registering MapOutputTracker
+18/08/07 10:46:32 INFO SparkEnv: Registering BlockManagerMaster
+18/08/07 10:46:32 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+18/08/07 10:46:32 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+18/08/07 10:46:32 INFO DiskBlockManager: Created local directory at C:\Users\ahi\AppData\Local\Temp\blockmgr-2e08df9c-3c9a-456a-9796-2752768e1b1e
+18/08/07 10:46:32 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+18/08/07 10:46:32 INFO SparkEnv: Registering OutputCommitCoordinator
+18/08/07 10:46:32 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+18/08/07 10:46:32 INFO SparkUI: Bound SparkUI to 127.0.0.1, and started at http://127.0.0.1:4040
+18/08/07 10:46:32 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar at spark://127.0.0.1:64348/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar with timestamp 1533631592314
+18/08/07 10:46:32 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/org.joda_joda-convert-1.2.jar at spark://127.0.0.1:64348/jars/org.joda_joda-convert-1.2.jar with timestamp 1533631592314
+18/08/07 10:46:32 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/com.twitter_jsr166e-1.1.0.jar at spark://127.0.0.1:64348/jars/com.twitter_jsr166e-1.1.0.jar with timestamp 1533631592315
+18/08/07 10:46:32 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/joda-time_joda-time-2.3.jar at spark://127.0.0.1:64348/jars/joda-time_joda-time-2.3.jar with timestamp 1533631592315
+18/08/07 10:46:32 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/commons-beanutils_commons-beanutils-1.9.3.jar at spark://127.0.0.1:64348/jars/commons-beanutils_commons-beanutils-1.9.3.jar with timestamp 1533631592316
+18/08/07 10:46:32 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/io.netty_netty-all-4.0.33.Final.jar at spark://127.0.0.1:64348/jars/io.netty_netty-all-4.0.33.Final.jar with timestamp 1533631592316
+18/08/07 10:46:32 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/org.scala-lang_scala-reflect-2.11.8.jar at spark://127.0.0.1:64348/jars/org.scala-lang_scala-reflect-2.11.8.jar with timestamp 1533631592316
+18/08/07 10:46:32 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/commons-collections_commons-collections-3.2.2.jar at spark://127.0.0.1:64348/jars/commons-collections_commons-collections-3.2.2.jar with timestamp 1533631592317
+18/08/07 10:46:32 INFO SparkContext: Added JAR file:/C:/Users/ahi/Documents/R/win-library/3.5/sparklyr/java/sparklyr-2.3-2.11.jar at spark://127.0.0.1:64348/jars/sparklyr-2.3-2.11.jar with timestamp 1533631592317
+18/08/07 10:46:32 INFO Executor: Starting executor ID driver on host localhost
+18/08/07 10:46:32 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 64389.
+18/08/07 10:46:32 INFO NettyBlockTransferService: Server created on 127.0.0.1:64389
+18/08/07 10:46:32 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+18/08/07 10:46:32 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 64389, None)
+18/08/07 10:46:32 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.0.1:64389 with 366.3 MB RAM, BlockManagerId(driver, 127.0.0.1, 64389, None)
+18/08/07 10:46:32 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 64389, None)
+18/08/07 10:46:32 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 127.0.0.1, 64389, None)
+18/08/07 10:46:32 WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
+18/08/07 10:46:32 INFO SharedState: loading hive config file: file:/C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/conf/hive-site.xml
+18/08/07 10:46:32 INFO SharedState: Setting hive.metastore.warehouse.dir ('C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive') to the value of spark.sql.warehouse.dir ('C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive').
+18/08/07 10:46:32 INFO SharedState: Warehouse path is 'C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive'.
+18/08/07 10:46:33 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+18/08/07 10:46:34 INFO SparkContext: Starting job: collect at utils.scala:43
+18/08/07 10:46:34 INFO DAGScheduler: Got job 0 (collect at utils.scala:43) with 1 output partitions
+18/08/07 10:46:34 INFO DAGScheduler: Final stage: ResultStage 0 (collect at utils.scala:43)
+18/08/07 10:46:34 INFO DAGScheduler: Parents of final stage: List()
+18/08/07 10:46:34 INFO DAGScheduler: Missing parents: List()
+18/08/07 10:46:34 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:40), which has no missing parents
+18/08/07 10:46:34 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 5.9 KB, free 366.3 MB)
+18/08/07 10:46:34 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 3.3 KB, free 366.3 MB)
+18/08/07 10:46:34 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.0.1:64389 (size: 3.3 KB, free: 366.3 MB)
+18/08/07 10:46:34 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1039
+18/08/07 10:46:34 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:40) (first 15 tasks are for partitions Vector(0))
+18/08/07 10:46:34 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+18/08/07 10:46:34 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7880 bytes)
+18/08/07 10:46:34 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+18/08/07 10:46:34 INFO Executor: Fetching spark://127.0.0.1:64348/jars/com.twitter_jsr166e-1.1.0.jar with timestamp 1533631592315
+18/08/07 10:46:34 INFO TransportClientFactory: Successfully created connection to /127.0.0.1:64348 after 13 ms (0 ms spent in bootstraps)
+18/08/07 10:46:34 INFO Utils: Fetching spark://127.0.0.1:64348/jars/com.twitter_jsr166e-1.1.0.jar to C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b\userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40\fetchFileTemp1784968647494907711.tmp
+18/08/07 10:46:35 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b/userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40/com.twitter_jsr166e-1.1.0.jar to class loader
+18/08/07 10:46:35 INFO Executor: Fetching spark://127.0.0.1:64348/jars/commons-collections_commons-collections-3.2.2.jar with timestamp 1533631592317
+18/08/07 10:46:35 INFO Utils: Fetching spark://127.0.0.1:64348/jars/commons-collections_commons-collections-3.2.2.jar to C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b\userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40\fetchFileTemp3147752639706070139.tmp
+18/08/07 10:46:35 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b/userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40/commons-collections_commons-collections-3.2.2.jar to class loader
+18/08/07 10:46:35 INFO Executor: Fetching spark://127.0.0.1:64348/jars/org.joda_joda-convert-1.2.jar with timestamp 1533631592314
+18/08/07 10:46:35 INFO Utils: Fetching spark://127.0.0.1:64348/jars/org.joda_joda-convert-1.2.jar to C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b\userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40\fetchFileTemp1817525782752964422.tmp
+18/08/07 10:46:35 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b/userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40/org.joda_joda-convert-1.2.jar to class loader
+18/08/07 10:46:35 INFO Executor: Fetching spark://127.0.0.1:64348/jars/sparklyr-2.3-2.11.jar with timestamp 1533631592317
+18/08/07 10:46:35 INFO Utils: Fetching spark://127.0.0.1:64348/jars/sparklyr-2.3-2.11.jar to C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b\userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40\fetchFileTemp8874383225961442064.tmp
+18/08/07 10:46:35 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b/userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40/sparklyr-2.3-2.11.jar to class loader
+18/08/07 10:46:35 INFO Executor: Fetching spark://127.0.0.1:64348/jars/commons-beanutils_commons-beanutils-1.9.3.jar with timestamp 1533631592316
+18/08/07 10:46:35 INFO Utils: Fetching spark://127.0.0.1:64348/jars/commons-beanutils_commons-beanutils-1.9.3.jar to C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b\userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40\fetchFileTemp5611140083480731626.tmp
+18/08/07 10:46:35 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b/userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40/commons-beanutils_commons-beanutils-1.9.3.jar to class loader
+18/08/07 10:46:35 INFO Executor: Fetching spark://127.0.0.1:64348/jars/io.netty_netty-all-4.0.33.Final.jar with timestamp 1533631592316
+18/08/07 10:46:35 INFO Utils: Fetching spark://127.0.0.1:64348/jars/io.netty_netty-all-4.0.33.Final.jar to C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b\userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40\fetchFileTemp2855591754907303728.tmp
+18/08/07 10:46:35 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b/userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40/io.netty_netty-all-4.0.33.Final.jar to class loader
+18/08/07 10:46:35 INFO Executor: Fetching spark://127.0.0.1:64348/jars/org.scala-lang_scala-reflect-2.11.8.jar with timestamp 1533631592316
+18/08/07 10:46:35 INFO Utils: Fetching spark://127.0.0.1:64348/jars/org.scala-lang_scala-reflect-2.11.8.jar to C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b\userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40\fetchFileTemp5429327625686140214.tmp
+18/08/07 10:46:35 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b/userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40/org.scala-lang_scala-reflect-2.11.8.jar to class loader
+18/08/07 10:46:35 INFO Executor: Fetching spark://127.0.0.1:64348/jars/joda-time_joda-time-2.3.jar with timestamp 1533631592315
+18/08/07 10:46:35 INFO Utils: Fetching spark://127.0.0.1:64348/jars/joda-time_joda-time-2.3.jar to C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b\userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40\fetchFileTemp4612715048950414341.tmp
+18/08/07 10:46:35 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b/userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40/joda-time_joda-time-2.3.jar to class loader
+18/08/07 10:46:35 INFO Executor: Fetching spark://127.0.0.1:64348/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar with timestamp 1533631592314
+18/08/07 10:46:35 INFO Utils: Fetching spark://127.0.0.1:64348/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar to C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b\userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40\fetchFileTemp9097454144303578658.tmp
+18/08/07 10:46:35 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b/userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar to class loader
+18/08/07 10:46:35 INFO CodeGenerator: Code generated in 173.474756 ms
+18/08/07 10:46:35 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 970 bytes result sent to driver
+18/08/07 10:46:35 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 867 ms on localhost (executor driver) (1/1)
+18/08/07 10:46:35 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+18/08/07 10:46:35 INFO DAGScheduler: ResultStage 0 (collect at utils.scala:43) finished in 1,023 s
+18/08/07 10:46:35 INFO DAGScheduler: Job 0 finished: collect at utils.scala:43, took 1,060918 s
+18/08/07 10:46:35 WARN SparkSession$Builder: Using an existing SparkSession; some configuration may not take effect.
+18/08/07 10:46:36 INFO Native: Could not load JNR C Library, native system calls through this library will not be available (set this logger level to DEBUG to see the full stack trace).
+18/08/07 10:46:36 INFO ClockFactory: Using java.lang.System clock to generate timestamps.
+18/08/07 10:46:36 WARN NettyUtil: Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+18/08/07 10:46:39 INFO SparkContext: Invoking stop() from shutdown hook
+18/08/07 10:46:39 INFO SerialShutdownHooks: Successfully executed shutdown hook: Clearing session cache for C* connector
+18/08/07 10:46:39 INFO SparkUI: Stopped Spark web UI at http://127.0.0.1:4040
+18/08/07 10:46:39 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+18/08/07 10:46:39 INFO MemoryStore: MemoryStore cleared
+18/08/07 10:46:39 INFO BlockManager: BlockManager stopped
+18/08/07 10:46:39 INFO BlockManagerMaster: BlockManagerMaster stopped
+18/08/07 10:46:39 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+18/08/07 10:46:39 WARN SparkEnv: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b\userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b\userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.SparkEnv.stop(SparkEnv.scala:103)
+	at org.apache.spark.SparkContext$$anonfun$stop$11.apply$mcV$sp(SparkContext.scala:1940)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1357)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1939)
+	at org.apache.spark.SparkContext$$anonfun$2.apply$mcV$sp(SparkContext.scala:572)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 10:46:39 INFO SparkContext: Successfully stopped SparkContext
+18/08/07 10:46:39 INFO ShutdownHookManager: Shutdown hook called
+18/08/07 10:46:39 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-c5e88266-e23c-40e0-a54a-9f562136d6a1
+18/08/07 10:46:39 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b\userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40
+18/08/07 10:46:39 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b\userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b\userFiles-bbe91693-60b0-445c-9d77-fd8fba5c3c40
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 10:46:39 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b
+18/08/07 10:46:39 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-062655d4-14ad-4cee-91ee-0a53c5e50c8b
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 17:24:08 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/08/07 17:24:09 INFO SparkContext: Running Spark version 2.3.0
+18/08/07 17:24:10 INFO SparkContext: Submitted application: sparklyr
+18/08/07 17:24:10 INFO SecurityManager: Changing view acls to: ahi
+18/08/07 17:24:10 INFO SecurityManager: Changing modify acls to: ahi
+18/08/07 17:24:10 INFO SecurityManager: Changing view acls groups to: 
+18/08/07 17:24:10 INFO SecurityManager: Changing modify acls groups to: 
+18/08/07 17:24:10 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ahi); groups with view permissions: Set(); users  with modify permissions: Set(ahi); groups with modify permissions: Set()
+18/08/07 17:24:10 INFO Utils: Successfully started service 'sparkDriver' on port 50324.
+18/08/07 17:24:10 INFO SparkEnv: Registering MapOutputTracker
+18/08/07 17:24:10 INFO SparkEnv: Registering BlockManagerMaster
+18/08/07 17:24:10 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+18/08/07 17:24:10 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+18/08/07 17:24:10 INFO DiskBlockManager: Created local directory at C:\Users\ahi\AppData\Local\Temp\blockmgr-e0be2aa0-9069-43a7-a800-cdec57041298
+18/08/07 17:24:10 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+18/08/07 17:24:10 INFO SparkEnv: Registering OutputCommitCoordinator
+18/08/07 17:24:10 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+18/08/07 17:24:10 INFO SparkUI: Bound SparkUI to 127.0.0.1, and started at http://127.0.0.1:4040
+18/08/07 17:24:10 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar at spark://127.0.0.1:50324/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar with timestamp 1533655450506
+18/08/07 17:24:10 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/org.joda_joda-convert-1.2.jar at spark://127.0.0.1:50324/jars/org.joda_joda-convert-1.2.jar with timestamp 1533655450507
+18/08/07 17:24:10 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/com.twitter_jsr166e-1.1.0.jar at spark://127.0.0.1:50324/jars/com.twitter_jsr166e-1.1.0.jar with timestamp 1533655450508
+18/08/07 17:24:10 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/joda-time_joda-time-2.3.jar at spark://127.0.0.1:50324/jars/joda-time_joda-time-2.3.jar with timestamp 1533655450508
+18/08/07 17:24:10 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/commons-beanutils_commons-beanutils-1.9.3.jar at spark://127.0.0.1:50324/jars/commons-beanutils_commons-beanutils-1.9.3.jar with timestamp 1533655450508
+18/08/07 17:24:10 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/io.netty_netty-all-4.0.33.Final.jar at spark://127.0.0.1:50324/jars/io.netty_netty-all-4.0.33.Final.jar with timestamp 1533655450509
+18/08/07 17:24:10 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/org.scala-lang_scala-reflect-2.11.8.jar at spark://127.0.0.1:50324/jars/org.scala-lang_scala-reflect-2.11.8.jar with timestamp 1533655450509
+18/08/07 17:24:10 INFO SparkContext: Added JAR file:///C:/Users/ahi/.ivy2/jars/commons-collections_commons-collections-3.2.2.jar at spark://127.0.0.1:50324/jars/commons-collections_commons-collections-3.2.2.jar with timestamp 1533655450509
+18/08/07 17:24:10 INFO SparkContext: Added JAR file:/C:/Users/ahi/Documents/R/win-library/3.5/sparklyr/java/sparklyr-2.3-2.11.jar at spark://127.0.0.1:50324/jars/sparklyr-2.3-2.11.jar with timestamp 1533655450510
+18/08/07 17:24:10 INFO Executor: Starting executor ID driver on host localhost
+18/08/07 17:24:10 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 50365.
+18/08/07 17:24:10 INFO NettyBlockTransferService: Server created on 127.0.0.1:50365
+18/08/07 17:24:10 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+18/08/07 17:24:10 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 50365, None)
+18/08/07 17:24:10 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.0.1:50365 with 366.3 MB RAM, BlockManagerId(driver, 127.0.0.1, 50365, None)
+18/08/07 17:24:10 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 50365, None)
+18/08/07 17:24:10 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 127.0.0.1, 50365, None)
+18/08/07 17:24:10 WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
+18/08/07 17:24:10 INFO SharedState: loading hive config file: file:/C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/conf/hive-site.xml
+18/08/07 17:24:11 INFO SharedState: Setting hive.metastore.warehouse.dir ('C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive') to the value of spark.sql.warehouse.dir ('C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive').
+18/08/07 17:24:11 INFO SharedState: Warehouse path is 'C:/Users/ahi/AppData/Local/spark/spark-2.3.0-bin-hadoop2.7/tmp/hive'.
+18/08/07 17:24:11 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+18/08/07 17:24:13 INFO SparkContext: Starting job: collect at utils.scala:43
+18/08/07 17:24:13 INFO DAGScheduler: Got job 0 (collect at utils.scala:43) with 1 output partitions
+18/08/07 17:24:13 INFO DAGScheduler: Final stage: ResultStage 0 (collect at utils.scala:43)
+18/08/07 17:24:13 INFO DAGScheduler: Parents of final stage: List()
+18/08/07 17:24:13 INFO DAGScheduler: Missing parents: List()
+18/08/07 17:24:13 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:40), which has no missing parents
+18/08/07 17:24:13 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 5.9 KB, free 366.3 MB)
+18/08/07 17:24:13 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 3.3 KB, free 366.3 MB)
+18/08/07 17:24:13 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.0.1:50365 (size: 3.3 KB, free: 366.3 MB)
+18/08/07 17:24:13 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1039
+18/08/07 17:24:13 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:40) (first 15 tasks are for partitions Vector(0))
+18/08/07 17:24:13 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+18/08/07 17:24:13 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7880 bytes)
+18/08/07 17:24:13 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+18/08/07 17:24:13 INFO Executor: Fetching spark://127.0.0.1:50324/jars/com.twitter_jsr166e-1.1.0.jar with timestamp 1533655450508
+18/08/07 17:24:13 INFO TransportClientFactory: Successfully created connection to /127.0.0.1:50324 after 16 ms (0 ms spent in bootstraps)
+18/08/07 17:24:13 INFO Utils: Fetching spark://127.0.0.1:50324/jars/com.twitter_jsr166e-1.1.0.jar to C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d\userFiles-328de210-fd50-47cf-a61f-faad35f4f955\fetchFileTemp3107139604106771587.tmp
+18/08/07 17:24:13 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d/userFiles-328de210-fd50-47cf-a61f-faad35f4f955/com.twitter_jsr166e-1.1.0.jar to class loader
+18/08/07 17:24:13 INFO Executor: Fetching spark://127.0.0.1:50324/jars/joda-time_joda-time-2.3.jar with timestamp 1533655450508
+18/08/07 17:24:13 INFO Utils: Fetching spark://127.0.0.1:50324/jars/joda-time_joda-time-2.3.jar to C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d\userFiles-328de210-fd50-47cf-a61f-faad35f4f955\fetchFileTemp2398680022829511372.tmp
+18/08/07 17:24:13 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d/userFiles-328de210-fd50-47cf-a61f-faad35f4f955/joda-time_joda-time-2.3.jar to class loader
+18/08/07 17:24:13 INFO Executor: Fetching spark://127.0.0.1:50324/jars/commons-beanutils_commons-beanutils-1.9.3.jar with timestamp 1533655450508
+18/08/07 17:24:13 INFO Utils: Fetching spark://127.0.0.1:50324/jars/commons-beanutils_commons-beanutils-1.9.3.jar to C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d\userFiles-328de210-fd50-47cf-a61f-faad35f4f955\fetchFileTemp4831861935542050712.tmp
+18/08/07 17:24:14 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d/userFiles-328de210-fd50-47cf-a61f-faad35f4f955/commons-beanutils_commons-beanutils-1.9.3.jar to class loader
+18/08/07 17:24:14 INFO Executor: Fetching spark://127.0.0.1:50324/jars/sparklyr-2.3-2.11.jar with timestamp 1533655450510
+18/08/07 17:24:14 INFO Utils: Fetching spark://127.0.0.1:50324/jars/sparklyr-2.3-2.11.jar to C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d\userFiles-328de210-fd50-47cf-a61f-faad35f4f955\fetchFileTemp7694775563368044732.tmp
+18/08/07 17:24:14 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d/userFiles-328de210-fd50-47cf-a61f-faad35f4f955/sparklyr-2.3-2.11.jar to class loader
+18/08/07 17:24:14 INFO Executor: Fetching spark://127.0.0.1:50324/jars/commons-collections_commons-collections-3.2.2.jar with timestamp 1533655450509
+18/08/07 17:24:14 INFO Utils: Fetching spark://127.0.0.1:50324/jars/commons-collections_commons-collections-3.2.2.jar to C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d\userFiles-328de210-fd50-47cf-a61f-faad35f4f955\fetchFileTemp7186697405183727726.tmp
+18/08/07 17:24:14 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d/userFiles-328de210-fd50-47cf-a61f-faad35f4f955/commons-collections_commons-collections-3.2.2.jar to class loader
+18/08/07 17:24:14 INFO Executor: Fetching spark://127.0.0.1:50324/jars/org.joda_joda-convert-1.2.jar with timestamp 1533655450507
+18/08/07 17:24:14 INFO Utils: Fetching spark://127.0.0.1:50324/jars/org.joda_joda-convert-1.2.jar to C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d\userFiles-328de210-fd50-47cf-a61f-faad35f4f955\fetchFileTemp4902434359078289045.tmp
+18/08/07 17:24:14 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d/userFiles-328de210-fd50-47cf-a61f-faad35f4f955/org.joda_joda-convert-1.2.jar to class loader
+18/08/07 17:24:14 INFO Executor: Fetching spark://127.0.0.1:50324/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar with timestamp 1533655450506
+18/08/07 17:24:14 INFO Utils: Fetching spark://127.0.0.1:50324/jars/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar to C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d\userFiles-328de210-fd50-47cf-a61f-faad35f4f955\fetchFileTemp7178444355224584601.tmp
+18/08/07 17:24:14 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d/userFiles-328de210-fd50-47cf-a61f-faad35f4f955/datastax_spark-cassandra-connector-2.3.0-s_2.11.jar to class loader
+18/08/07 17:24:14 INFO Executor: Fetching spark://127.0.0.1:50324/jars/io.netty_netty-all-4.0.33.Final.jar with timestamp 1533655450509
+18/08/07 17:24:14 INFO Utils: Fetching spark://127.0.0.1:50324/jars/io.netty_netty-all-4.0.33.Final.jar to C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d\userFiles-328de210-fd50-47cf-a61f-faad35f4f955\fetchFileTemp8254794819894974032.tmp
+18/08/07 17:24:14 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d/userFiles-328de210-fd50-47cf-a61f-faad35f4f955/io.netty_netty-all-4.0.33.Final.jar to class loader
+18/08/07 17:24:14 INFO Executor: Fetching spark://127.0.0.1:50324/jars/org.scala-lang_scala-reflect-2.11.8.jar with timestamp 1533655450509
+18/08/07 17:24:14 INFO Utils: Fetching spark://127.0.0.1:50324/jars/org.scala-lang_scala-reflect-2.11.8.jar to C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d\userFiles-328de210-fd50-47cf-a61f-faad35f4f955\fetchFileTemp197571637743328707.tmp
+18/08/07 17:24:14 INFO Executor: Adding file:/C:/Users/ahi/AppData/Local/Temp/spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d/userFiles-328de210-fd50-47cf-a61f-faad35f4f955/org.scala-lang_scala-reflect-2.11.8.jar to class loader
+18/08/07 17:24:14 INFO CodeGenerator: Code generated in 200.473495 ms
+18/08/07 17:24:14 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 970 bytes result sent to driver
+18/08/07 17:24:14 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1044 ms on localhost (executor driver) (1/1)
+18/08/07 17:24:14 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+18/08/07 17:24:14 INFO DAGScheduler: ResultStage 0 (collect at utils.scala:43) finished in 1,252 s
+18/08/07 17:24:14 INFO DAGScheduler: Job 0 finished: collect at utils.scala:43, took 1,305502 s
+18/08/07 17:24:14 WARN SparkSession$Builder: Using an existing SparkSession; some configuration may not take effect.
+18/08/07 17:24:14 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 127.0.0.1:50365 in memory (size: 3.3 KB, free: 366.3 MB)
+18/08/07 17:24:15 INFO Native: Could not load JNR C Library, native system calls through this library will not be available (set this logger level to DEBUG to see the full stack trace).
+18/08/07 17:24:15 INFO ClockFactory: Using java.lang.System clock to generate timestamps.
+18/08/07 17:24:15 WARN NettyUtil: Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+18/08/07 17:24:18 INFO SparkContext: Invoking stop() from shutdown hook
+18/08/07 17:24:18 INFO SerialShutdownHooks: Successfully executed shutdown hook: Clearing session cache for C* connector
+18/08/07 17:24:18 INFO SparkUI: Stopped Spark web UI at http://127.0.0.1:4040
+18/08/07 17:24:18 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+18/08/07 17:24:18 INFO MemoryStore: MemoryStore cleared
+18/08/07 17:24:18 INFO BlockManager: BlockManager stopped
+18/08/07 17:24:18 INFO BlockManagerMaster: BlockManagerMaster stopped
+18/08/07 17:24:18 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+18/08/07 17:24:18 WARN SparkEnv: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d\userFiles-328de210-fd50-47cf-a61f-faad35f4f955
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d\userFiles-328de210-fd50-47cf-a61f-faad35f4f955
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.SparkEnv.stop(SparkEnv.scala:103)
+	at org.apache.spark.SparkContext$$anonfun$stop$11.apply$mcV$sp(SparkContext.scala:1940)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1357)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1939)
+	at org.apache.spark.SparkContext$$anonfun$2.apply$mcV$sp(SparkContext.scala:572)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 17:24:18 INFO SparkContext: Successfully stopped SparkContext
+18/08/07 17:24:18 INFO ShutdownHookManager: Shutdown hook called
+18/08/07 17:24:18 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d
+18/08/07 17:24:18 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 17:24:18 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d\userFiles-328de210-fd50-47cf-a61f-faad35f4f955
+18/08/07 17:24:18 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d\userFiles-328de210-fd50-47cf-a61f-faad35f4f955
+java.io.IOException: Failed to delete: C:\Users\ahi\AppData\Local\Temp\spark-73f75fd3-ccb6-4d96-90b6-59d9a972ea2d\userFiles-328de210-fd50-47cf-a61f-faad35f4f955
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1070)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1988)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+18/08/07 17:24:18 INFO ShutdownHookManager: Deleting directory C:\Users\ahi\AppData\Local\Temp\spark-9fc5fa22-1045-404b-8e97-f65e26d6a877
