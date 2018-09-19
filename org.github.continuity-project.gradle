@@ -19,9 +19,7 @@ buildscript {
 subprojects {
 	apply plugin: 'java'
 	apply plugin: 'eclipse'
-
-	version = '0.1'
-	
+	version = project.hasProperty('version') ? project.getProperty('version') : '1.0.0-snapshot'
 	sourceCompatibility = 1.8
 	targetCompatibility = 1.8
 }

@@ -1,21 +1,17 @@
 language: java
-
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
 branches:
   only:
   - master
-
 services:
-  - docker
+- docker
 env:
   global:
-    - GIT_MAJOR_VERSION=1
+  - GIT_MAJOR_VERSION=1
     - GIT_MINOR_VERSION=4
 after_success:
-  - if [ $TRAVIS_PULL_REQUEST == false ] && [ $TRAVIS_BRANCH == "master" ]; then
-
+- if [ $TRAVIS_PULL_REQUEST == false ] && [ $TRAVIS_BRANCH == "master" ]; then
     docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD;
 
     docker tag continuityproject/idpa-annotation continuityproject/idpa-annotation:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
@@ -67,7 +63,14 @@ after_success:
     docker push continuityproject/forecast:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
     docker tag continuityproject/forecast continuityproject/forecast:latest;
     docker push continuityproject/forecast:latest;
-    fi
 
+  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.api:uploadArchives :continuity.api:closeAndReleaseRepository;
+  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.idpa:uploadArchives :continuity.idpa:closeAndReleaseRepository;
+  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.commons:uploadArchives :continuity.commons:closeAndReleaseRepository;
+  fi
 script:
-- ./gradlew build docker
+- "./gradlew build docker"
+
+before_install:
+- openssl aes-256-cbc -K $encrypted_key -iv $encrypted_iv
+  -in secring.gpg.enc -out secring.gpg -d
