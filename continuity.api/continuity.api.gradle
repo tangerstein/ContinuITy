@@ -1,8 +1,6 @@
-/** Required plugins */
 plugins {
-	id "io.codearte.nexus-staging" version "0.8.0"
+  id "io.spring.dependency-management" version "1.0.6.RELEASE"
 }
-
 apply plugin: 'io.spring.dependency-management'
 
 
@@ -75,6 +73,8 @@ if (gradle.startParameter.getTaskNames().contains(":continuity.api:uploadArchive
 	}
 	group = "com.github.continuity-project"
 	archivesBaseName = "continuity.api"
+	stagingProfileId = "api_"+ project.getProperty('version')
+	
 	// Uploads the signed artifacts
 	uploadArchives {
 		repositories {

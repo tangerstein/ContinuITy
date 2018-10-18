@@ -12,64 +12,12 @@ env:
     - GIT_MINOR_VERSION=4
 after_success:
 - if [ $TRAVIS_PULL_REQUEST == false ] && [ $TRAVIS_BRANCH == "master" ]; then
-    docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD;
-
-    docker tag continuityproject/idpa-annotation continuityproject/idpa-annotation:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker push continuityproject/idpa-annotation:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker tag continuityproject/idpa-annotation continuityproject/idpa-annotation:latest;
-    docker push continuityproject/idpa-annotation:latest;
-
-    docker tag continuityproject/idpa-application continuityproject/idpa-application:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker push continuityproject/idpa-application:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker tag continuityproject/idpa-application continuityproject/idpa-application:latest;
-    docker push continuityproject/idpa-application:latest;
-
-    docker tag continuityproject/wessbas continuityproject/wessbas:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker push continuityproject/wessbas:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker tag continuityproject/wessbas continuityproject/wessbas:latest;
-    docker push continuityproject/wessbas:latest;
-
-    docker tag continuityproject/request-rates continuityproject/request-rates:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker push continuityproject/request-rates:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker tag continuityproject/request-rates continuityproject/request-rates:latest;
-    docker push continuityproject/request-rates:latest;
-
-    docker tag continuityproject/session-logs continuityproject/session-logs:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker push continuityproject/session-logs:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker tag continuityproject/session-logs continuityproject/session-logs:latest;
-    docker push continuityproject/session-logs:latest;
-
-    docker tag continuityproject/jmeter continuityproject/jmeter:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker push continuityproject/jmeter:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker tag continuityproject/jmeter continuityproject/jmeter:latest;
-    docker push continuityproject/jmeter:latest;
-
-    docker tag continuityproject/orchestrator continuityproject/orchestrator:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker push continuityproject/orchestrator:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker tag continuityproject/orchestrator continuityproject/orchestrator:latest;
-    docker push continuityproject/orchestrator:latest;
-
-    docker tag continuityproject/eureka continuityproject/eureka:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker push continuityproject/eureka:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker tag continuityproject/eureka continuityproject/eureka:latest;
-    docker push continuityproject/eureka:latest;
-
-    docker tag continuityproject/benchflow continuityproject/benchflow:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker push continuityproject/benchflow:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker tag continuityproject/benchflow continuityproject/benchflow:latest;
-    docker push continuityproject/benchflow:latest;
-
-    docker tag continuityproject/forecast continuityproject/forecast:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker push continuityproject/forecast:$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER;
-    docker tag continuityproject/forecast continuityproject/forecast:latest;
-    docker push continuityproject/forecast:latest;
-
-  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.api:uploadArchives :continuity.api:closeAndReleaseRepository;
-  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.idpa:uploadArchives :continuity.idpa:closeAndReleaseRepository;
-  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.commons:uploadArchives :continuity.commons:closeAndReleaseRepository;
+  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.api:uploadArchives 
+  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.idpa:uploadArchives 
+  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.commons:uploadArchives
   fi
 script:
-- "./gradlew build docker"
+- "./gradlew build"
 
 before_install:
 - openssl aes-256-cbc -K $encrypted_key -iv $encrypted_iv

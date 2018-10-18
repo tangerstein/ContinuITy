@@ -1,6 +1,6 @@
 /** Required plugins */
 plugins {
-	id "io.codearte.nexus-staging" version "0.8.0"
+	id "io.codearte.nexus-staging" version "0.12.0"
 }
 dependencies {
 	compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.1'
@@ -29,7 +29,6 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
  */
 apply plugin: 'maven'
 apply plugin: 'signing'
-apply plugin: 'io.codearte.nexus-staging'
 /**
   * When uploading the archives it has to be done using the full task name:
   * > gradle :continuity.idpa:uploadArchives
@@ -45,6 +44,8 @@ if (gradle.startParameter.getTaskNames().contains(":continuity.idpa:uploadArchiv
 	}
 	group = "com.github.continuity-project"
 	archivesBaseName = "continuity.idpa"
+	stagingProfileId = "idpa_"+ project.getProperty('version')
+	
 	// Uploads the signed artifacts
 	uploadArchives {
 		repositories {

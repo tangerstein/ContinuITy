@@ -4,8 +4,6 @@ dependencyManagement {
 	imports {
 		mavenBom 'org.springframework.cloud:spring-cloud-starter-parent:Finchley.M4'
 	}
-}
-
 dependencies {
 	compile project(':continuity.idpa')
 	compile project(':continuity.api')
@@ -63,7 +61,6 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
  */
 apply plugin: 'maven'
 apply plugin: 'signing'
-apply plugin: 'io.codearte.nexus-staging'
 /**
   * When uploading the archives it has to be done using the full task name:
   * > gradle :continuity.commons:uploadArchives
@@ -79,6 +76,7 @@ if (gradle.startParameter.getTaskNames().contains(":continuity.commons:uploadArc
 	}
 	group = "com.github.continuity-project"
 	archivesBaseName = "continuity.commons"
+	stagingProfileId = "commons_"+ project.getProperty('version')
 	// Uploads the signed artifacts
 	uploadArchives {
 		repositories {

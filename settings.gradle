@@ -1,4 +1,4 @@
-rootProject.name = "org.github.continuity-project"
+rootProject.name = "com.github.continuity-project"
 
 include "continuity.api"
 include "continuity.benchflow"
