@@ -40,7 +40,7 @@ import org.rosuda.JRI.Rengine;
  */
 public class ForecastPipelineManager {
 
-	// private static final Logger LOGGER = LoggerFactory.getLogger(ForecastPipelineManager.class);
+	private static final long NANOS_TO_MILLIS_FACTOR = 1000000;
 
 	private InfluxDB influxDb;
 
@@ -183,7 +183,7 @@ public class ForecastPipelineManager {
 	private int calculateSizeOfForecast(ArrayList<Long> timestampsOfIntensities) {
 		long endTimeIntensities = timestampsOfIntensities.get(timestampsOfIntensities.size() - 1);
 		long endTimeForecast = this.forecastInput.getForecastOptions().getDateAsTimestamp();
-		long interval = calculateInterval(this.forecastInput.getForecastOptions().getInterval());
+		long interval = this.forecastInput.getForecastOptions().getInterval().asNumber() / NANOS_TO_MILLIS_FACTOR;
 
 		// Calculates considered future timestamps
 		long startTimeForecast = endTimeIntensities + interval;
@@ -232,7 +232,7 @@ public class ForecastPipelineManager {
 
 			long endTimeForecast = this.forecastInput.getForecastOptions().getDateAsTimestamp();
 
-			long interval = calculateInterval(this.forecastInput.getForecastOptions().getInterval());
+			long interval = this.forecastInput.getForecastOptions().getInterval().asNumber() /NANOS_TO_MILLIS_FACTOR;
 
 			// Calculates considered future timestamps
 			long startTimeForecast = endTimeIntensities + interval;
@@ -581,30 +581,6 @@ public class ForecastPipelineManager {
 		}
 		matrixString += ")";
 		return matrixString;
-	}
-
-	/**
-	 * Returns interval in numerical representation.
-	 * 
-	 * @param interval
-	 * @return
-	 */
-	private long calculateInterval(String interval) {
-		long numericInterval = 0;
-		switch (interval) {
-		case "secondly":
-			numericInterval = 1000L;
-			break;
-		case "minutely":
-			numericInterval = 60000L;
-			break;
-		case "hourly":
-			numericInterval = 3600000L;
-			break;
-		default:
-			numericInterval = 1000L;
-		}
-		return numericInterval;
 	}
 
 	/**
