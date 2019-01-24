@@ -1,9 +1,22 @@
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "de.marcphilipp.gradle:nexus-publish-plugin:0.1.1"
+  }
+}
+
+apply plugin: "de.marcphilipp.nexus-publish"
 apply plugin: 'io.spring.dependency-management'
 
 dependencyManagement {
 	imports {
 		mavenBom 'org.springframework.cloud:spring-cloud-starter-parent:Finchley.M4'
 	}
+}
 dependencies {
 	compile project(':continuity.idpa')
 	compile project(':continuity.api')
@@ -56,16 +69,22 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 	classifier = 'javadoc'
 	from javadoc.destinationDir
 }
-/**
- * Pushing to maven centeral.
- */
-apply plugin: 'maven'
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+
 apply plugin: 'signing'
-/**
-  * When uploading the archives it has to be done using the full task name:
-  * > gradle :continuity.commons:uploadArchives
-  */
-if (gradle.startParameter.getTaskNames().contains(":continuity.commons:uploadArchives")) {
+
+nexusPublishing {
+	if(gradle.startParameter.getTaskNames().contains("continuity.commons:publish")){
+    username = project.property('sonatype.username')
+	password = project.property('sonatype.password')
+	packageGroup = "com.github.continuity-project"
 	// Artifacts to build
 	artifacts {
 		archives sourcesJar, javadocJar
@@ -75,77 +94,21 @@ if (gradle.startParameter.getTaskNames().contains(":continuity.commons:uploadArc
 		sign configurations.archives
 	}
 	group = "com.github.continuity-project"
-	archivesBaseName = "continuity.commons"
-	stagingProfileId = "commons_"+ project.getProperty('version')
-	// Uploads the signed artifacts
-	uploadArchives {
-		repositories {
-			mavenDeployer {
-				// check if necessary parameter exists
-				if (!project.hasProperty('sonatype.username') || !project.hasProperty('sonatype.password')) {
-					throw new GradleException('Credentials for Sonytype are missing.')
-				}
-				if (!project.hasProperty('version')) {
-					throw new GradleException('The version of the library has to be specified. (Specified by "version")')
-				}
-				
-				beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
-				repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
-					authentication(userName: project.property('sonatype.username'), password: project.property('sonatype.password'))
-				}
-				snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots") {
-					authentication(userName: project.property('sonatype.username'), password: project.property('sonatype.password'))
-				}
-				version = project.getProperty('version')
-				pom.project {
-					name 'continuity.commons'
-					packaging 'jar'
-					description 'Commons library of ContinuITy. Provides common functionalities.'
-					url 'https://continuity-project.github.io/'
-					scm {
-						url "https://github.com/ContinuITy-Project/ContinuITy"
-						connection "scm:git:https://github.com/ContinuITy-Project/ContinuITy.git"
-						developerConnection "scm:git:git@github.com:ContinuITy-Project/ContinuITy.git"
-					}
-					issueManagement {
-						system 'jira'
-						url 'https://continuity-project.atlassian.net'
-					}
-					licenses {
-						license {
-							name 'The Apache Software License, Version 2.0'
-							url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-							distribution 'repo'
-						}
-					}
-					developers {
-						developer {
-							id 'ContinuITy-team'
-							name 'The ContinuITy Research Team'
-							organizationUrl 'https://continuity-project.github.io/'
-						}
-					}
-				}
-			}
-		}
+	archivesBaseName = "continuity.api"
+	stagingProfileId = "6ca7f6472fe302"
 	}
 }
-/**
-  * When closing or releasing the staging repository it has to be done using the full task name:
-  * > gradle :continuity.commons.java.sdk:<TASK>
-  *
-  * Note: Always use the 'closeAndReleaseRepository' in the Jenkins build process.
-  */
-if (gradle.startParameter.getTaskNames().contains(":continuity.commons:closeAndReleaseRepository")
-	|| gradle.startParameter.getTaskNames().contains(":continuity.commons:closeRepository")
-	|| gradle.startParameter.getTaskNames().contains(":continuity.commons:releaseRepository")) {
+	
+	
+	
 	nexusStaging {
+		if(gradle.startParameter.getTaskNames().contains("continuity.commons:closeAndReleaseRepository")){
 		// check if necessary parameter exists
 		if (!project.hasProperty('sonatype.username') || !project.hasProperty('sonatype.password')) {
 			throw new GradleException('Credentials for Sonytype are missing.')
 		}
 		username = project.property('sonatype.username')
 		password = project.property('sonatype.password')
-		packageGroup = "com.github.continuity-project"
-	}
-} 
+		stagingProfileId = "6ca7f6472fe302"
+		}
+}

@@ -12,9 +12,9 @@ env:
     - GIT_MINOR_VERSION=4
 after_success:
 - if [ $TRAVIS_PULL_REQUEST == false ] && [ $TRAVIS_BRANCH == "master" ]; then
-  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.api:uploadArchives 
-  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.idpa:uploadArchives 
-  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.commons:uploadArchives
+  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.api:publish 
+  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.idpa:publish 
+  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.commons:publish
   fi
 script:
 - "./gradlew build"
