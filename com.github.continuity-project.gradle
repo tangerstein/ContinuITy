@@ -1,7 +1,3 @@
-/** Required plugins */
-plugins {
-	id "io.codearte.nexus-staging" version "0.12.0"
-}
 buildscript {
 	ext {
 		springBootVersion = '2.0.0.M6'
@@ -16,14 +12,20 @@ buildscript {
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 		classpath('gradle.plugin.com.palantir.gradle.docker:gradle-docker:0.13.0')
+        classpath "io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.20.0"
+		classpath "io.spring.gradle:dependency-management-plugin:1.0.6.RELEASE"
 	}
 }
+
+plugins { id "org.springframework.boot" version "2.0.1.RELEASE" }
+
+
+apply plugin: 'io.codearte.nexus-staging'
 
 
 subprojects {
 	apply plugin: 'java'
 	apply plugin: 'eclipse'
-	apply plugin: 'io.codearte.nexus-staging'
 	version = project.hasProperty('version') ? project.getProperty('version') : '1.0.0-snapshot'
 	sourceCompatibility = 1.8
 	targetCompatibility = 1.8

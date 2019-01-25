@@ -9,12 +9,12 @@ services:
 env:
   global:
   - GIT_MAJOR_VERSION=1
-    - GIT_MINOR_VERSION=4
+  - GIT_MINOR_VERSION=4
 after_success:
 - if [ $TRAVIS_PULL_REQUEST == false ] && [ $TRAVIS_BRANCH == "master" ]; then
-  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.api:publish 
-  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.idpa:publish 
-  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER :continuity.commons:publish
+  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER.dev continuity.api:publish continuity.api:closeAndReleaseRepository;
+  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER.dev continuity.idpa:publish continuity.idpa:closeAndReleaseRepository; 
+  ./gradlew -Psigning.keyId=$KEY_ID -Psigning.password=$SIGNING_PASSWORD -Psigning.secretKeyRingFile=../secring.gpg -Psonatype.username=$SONATYPE_USERNAME -Psonatype.password=$SONATYPE_PASSWORD -Pversion=$GIT_MAJOR_VERSION.$GIT_MINOR_VERSION.$TRAVIS_BUILD_NUMBER.dev continuity.commons:publish continuity.commons:closeAndReleaseRepository;
   fi
 script:
 - "./gradlew build"
